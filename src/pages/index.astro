@@ -1,15 +1,74 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import ContextAlert from '../components/ContextAlert.astro';
-import Markdown from '../components/Markdown.astro';  // Ensure this is imported
-const explainer = `Hi! I'm Zack, and this is my professional portfolio`;
+import Markdown from '../components/Markdown.astro';
+const explainer = `Hi! I'm Zack, a passionate software developer and IT professional with experience in web development, project management, and problem-solving. Explore my portfolio to see my skills, projects, and more!`;
 ---
 
 <Layout title="Zack ZoBell Portfolio">
-    <ContextAlert class="mb-4" />
-    <h1 class="mb-10">Welcome to my Portfolio</h1>
-    <Markdown content={explainer} class="text-lg mb-10" />
-    <p class="mb-8">
-        <a href="https://zack.zobell.com/resume/" class="btn btn-lg btn-primary sm:btn-wide">View My Resume</a>
-    </p>
+    <!-- Hero Section -->
+    <section class="hero bg-gradient-to-r from-indigo-500 to-blue-500 text-white p-12 text-center">
+        <h1 class="text-4xl font-bold">Hi, I'm Zack ZoBell</h1>
+        <p class="text-lg mt-4">{explainer}</p>
+        <a href="/resume" class="btn btn-primary mt-6">Download My Resume</a>
+    </section>
+
+    <!-- About Me Section -->
+    <section class="about bg-white text-black py-12">
+        <h2 class="text-3xl font-semibold text-center">About Me</h2>
+        <p class="mt-4 max-w-4xl mx-auto text-center">
+            I am a dedicated IT professional with a passion for creating efficient, scalable solutions.
+            Whether it's software development or network design, I enjoy solving problems and continuously
+            improving my skill set. I aim to contribute to innovative teams in tech-driven environments.
+        </p>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills bg-gray-100 py-12">
+        <h2 class="text-3xl font-semibold text-center">Skills & Expertise</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 max-w-5xl mx-auto">
+            <div class="skill text-center">
+                <h3 class="font-semibold">Web Development</h3>
+                <p>HTML, CSS, JavaScript, React, Node.js</p>
+            </div>
+            <div class="skill text-center">
+                <h3 class="font-semibold">Network Administration</h3>
+                <p>LAN/WAN, TCP/IP, VPN, Firewalls</p>
+            </div>
+            <div class="skill text-center">
+                <h3 class="font-semibold">Project Management</h3>
+                <p>Agile, Scrum, Team Leadership</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio bg-white py-12">
+        <h2 class="text-3xl font-semibold text-center">My Work</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 max-w-5xl mx-auto">
+            <div class="project text-center">
+                <h3 class="font-semibold">Project 1</h3>
+                <p>Short description of the project</p>
+                <a href="/project1" class="btn btn-primary mt-4">View Details</a>
+            </div>
+            <div class="project text-center">
+                <h3 class="font-semibold">Project 2</h3>
+                <p>Short description of the project</p>
+                <a href="/project2" class="btn btn-primary mt-4">View Details</a>
+            </div>
+            <div class="project text-center">
+                <h3 class="font-semibold">Project 3</h3>
+                <p>Short description of the project</p>
+                <a href="/project3" class="btn btn-primary mt-4">View Details</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact bg-gray-200 py-12">
+        <h2 class="text-3xl font-semibold text-center">Contact Me</h2>
+        <p class="text-center mt-4">Feel free to reach out to discuss projects, opportunities, or collaborations.</p>
+        <div class="text-center mt-6">
+            <a href="mailto:zack@example.com" class="btn btn-primary">Email Me</a>
+        </div>
+    </section>
 </Layout>

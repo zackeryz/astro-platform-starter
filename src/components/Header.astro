@@ -1,6 +1,10 @@
 ---
+
 // Import the logo as an image source
 import Logo from '../components/zack.logo.jpg';
+
+
+
 
 // Define navigation items
 const navItems = [
@@ -16,7 +20,9 @@ const navItems = [
 <nav class="flex flex-wrap items-center gap-4 pt-6 pb-16 sm:pt-12 sm:pb-24">
     <!-- Use an <img> tag to display the logo -->
     <a href="/">
+
         <img src={Logo} alt="Logo" class="h-10" />
+
     </a>
     {
         !!navItems?.length && (

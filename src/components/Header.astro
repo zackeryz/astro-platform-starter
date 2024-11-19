@@ -1,8 +1,8 @@
 ---
 
 // Import the logo as an image source
-import Logo from '../components/zack.logo.jpg';
-
+import { Image } from 'astro:assets';
+import pumpkin from '../assets/zack.logo.jpg';
 
 
 
@@ -21,7 +21,7 @@ const navItems = [
     <!-- Use an <img> tag to display the logo -->
     <a href="/">
 
-        <img src={Logo} alt="Logo" class="h-10" />
+        <img src={pumpkin} alt="pumpkin head" class="h-10" />
 
     </a>
     {

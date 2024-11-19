@@ -1,12 +1,22 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import ContextAlert from '../components/ContextAlert.astro';
+import { Image } from 'astro:assets';
+import photo from '../assets/about.jpg';
+
 ---
 
 <Layout title="Zack ZoBell Portfolio">
     <ContextAlert class="mb-4" />
-    <h1 class="mb-10">My Resume</h1>
-    <p class="mb-8">
-        Welcome to my portfolio. Here you can find my resume, programming projects, and more.
-    </p>
+    <h1 class="mb-10">About</h1>
+	<div float="left" width="50%">
+	<img src={photo} alt="zack zobell"/ width='90%' height='90%'>
+	</div>
+	<div float="right" width="50%>
+	<h3>About me</h3>
+	<p>
+	I study CIT at Lethbridge Polytechnic. Other than Video games and computers I like to spend most of my time outside Hiking or Snowboarding.<br>
+	
+	</p>
+	</div>
 </Layout>

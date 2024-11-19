@@ -3,14 +3,14 @@ import Layout from '../layouts/Layout.astro';
 import ContextAlert from '../components/ContextAlert.astro';
 import Markdown from '../components/Markdown.astro';
 import Navbar from '../components/Navbar.astro';
-const explainer = ``;
+const explainer = `Hi! I'm Zack, and this is my proffessional portfolio`;
 ---
 <Layout title="Zack ZoBell Portfolio.">
     <ContextAlert class="mb-4" />
     <h1 class="mb-10">Welcome to my Portfolio</h1>
     <Markdown content={explainer} class="text-lg mb-10" />
     <p class="mb-8">
-Hi! I'm Zack, and this is my proffessional portfolio<br/>
+<br/>
         <a href="https://zack.zobell.com/resume/" class="btn btn-lg btn-primary sm:btn-wide">View My Resume</a>
     </p>
 </Layout>

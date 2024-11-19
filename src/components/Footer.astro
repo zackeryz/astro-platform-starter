@@ -1,9 +1,41 @@
----
 
----
 
-<footer class="pt-16 pb-12 sm:pt-24 sm:pb-16">
-    <p class="text-sm">
-        <a href="https://docs.netlify.com/frameworks/astro/" class="decoration-dashed text-primary underline-offset-8"> Astro on Netlify </a>
-    </p>
+<footer class="bg-gray-800 text-white py-8">
+    <div class="container mx-auto flex justify-between items-center">
+        <!-- Left side: Site links -->
+        <div class="flex flex-col sm:flex-row gap-4">
+            <a href="/" class="text-lg hover:text-gray-400">Home</a>
+            <a href="/resume" class="text-lg hover:text-gray-400">Resume</a>
+            <a href="/about" class="text-lg hover:text-gray-400">About</a>
+            <a href="/contact" class="text-lg hover:text-gray-400">Contact</a>
+            <a href="/sample_projects" class="text-lg hover:text-gray-400">Projects</a>
+        </div>
+
+        <!-- Right side: Social media & contact -->
+        <div class="flex flex-col items-center sm:items-end">
+            <div class="flex gap-4 mb-4">
+                <!-- Social Media Links -->
+                <a href="https://twitter.com" class="hover:text-gray-400">
+                    <img src="/images/twitter-icon.svg" alt="Twitter" class="w-6 h-6"/>
+                </a>
+                <a href="https://linkedin.com" class="hover:text-gray-400">
+                    <img src="/images/linkedin-icon.svg" alt="LinkedIn" class="w-6 h-6"/>
+                </a>
+                <a href="https://github.com" class="hover:text-gray-400">
+                    <img src="/images/github-icon.svg" alt="GitHub" class="w-6 h-6"/>
+                </a>
+            </div>
+
+            <!-- Contact Information -->
+            <p class="text-sm text-center sm:text-right">
+                <a href="mailto:your.email@example.com" class="hover:text-gray-400">your.email@example.com</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Bottom: Copyright -->
+    <div class="mt-4 text-center text-sm text-gray-400">
+        &copy; 2024 Zack ZoBell. All rights reserved.
+    </div>
 </footer>
+

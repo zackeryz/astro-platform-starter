@@ -9,14 +9,26 @@ import photo from '../assets/about.jpg';
 <Layout title="Zack ZoBell Portfolio">
     <ContextAlert class="mb-4" />
     <h1 class="mb-10">About</h1>
-	<div float="left" width="50%">
-	<img src={photo} alt="zack zobell"/ width='90%' height='90%'>
-	</div>
-	<div float="right" width="50%>
-	<h3>About me</h3>
-	<p>
-	I study CIT at Lethbridge Polytechnic. Other than Video games and computers I like to spend most of my time outside Hiking or Snowboarding.<br>
-	
-	</p>
-	</div>
+<section class="about-me flex items-center justify-between bg-gray-800 text-white p-8">
+    <!-- Image on the left -->
+    <div class="w-1/3">
+        <img src="/images/zack.jpg" alt="Zack ZoBell" class="w-full h-auto rounded-lg shadow-lg" />
+    </div>
+    
+    <!-- About Me text on the right -->
+    <div class="w-2/3 pl-8">
+        <h2 class="text-3xl mb-4">About Me</h2>
+        <p class="mb-6">
+            Hi, I'm Zack ZoBell, a passionate individual who has always been fascinated by technology. Growing up, my dad, who has always been in IT, had tech around the house. This exposure sparked my curiosity and led me to develop a deep interest in computers and how they work. I find joy in problem-solving, coding, and understanding the intricate details of technology.
+        </p>
+        <p class="mb-6">
+            Outside of my career and tech interests, I enjoy snowboarding, hiking, and playing pool. These activities give me the chance to connect with nature, stay active, and challenge myself. I also love video games, where I can unwind. Each of these activities contributes to my well-rounded personality, offering both mental and physical challenges.
+        </p>
+        <p>
+            Combining my love for tech and these hobbies, I constantly seek new ways to grow, learn, and have fun. I'm always looking for projects and challenges that allow me to apply my IT skills in creative ways, whether it's developing software, troubleshooting, or learning new technologies.
+        </p>
+    </div>
+</section>
+
+
 </Layout>

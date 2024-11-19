@@ -1,5 +1,5 @@
 ---
-// Define the navigation items
+// Import navigation items
 const navItems = [
     { linkText: 'Home', href: '/' },
     { linkText: 'Resume', href: '/resume' },
@@ -13,19 +13,21 @@ const navItems = [
 <nav class="flex flex-wrap items-center gap-4 pt-6 pb-16 sm:pt-12 sm:pb-24">
     <!-- Use the <img> tag to display the logo -->
     <a href="/">
-        <img src="/assets/zack.jpg" alt="Zack ZoBell Logo" class="h-10" />
+        <img src="/images/zack.jpg" alt="Zack ZoBell Logo" class="h-10" />
     </a>
-
-    {navItems.length > 0 && (
-        <ul class="flex flex-wrap gap-x-4 gap-y-1">
-            {navItems.map((item) => (
-                <li key={item.linkText}>
-                    <a href={item.href} class="inline-block px-1.5 py-1 sm:px-3 sm:py-2">
-                        {item.linkText}
-                    </a>
-                </li>
-            ))}
-        </ul>
-    )}
+    {
+        !!navItems?.length && (
+            <ul class="flex flex-wrap gap-x-4 gap-y-1">
+                {navItems.map((item) => (
+                    <li>
+                        <a href={item.href} class="inline-block px-1.5 py-1 sm:px-3 sm:py-2">
+                            {item.linkText}
+                        </a>
+                    </li>
+                ))}
+            </ul>
+        )
+    }
 </nav>
+
 

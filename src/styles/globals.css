@@ -58,4 +58,11 @@ div.transbox{
 	padding:2px;
 	opacity:0.0;
 }
-
+.landing-page-container {
+  max-width: 800px; /* Adjust width as needed */
+  margin: 20px auto; /* Center the container */
+  padding: 20px; /* Add internal spacing */
+  background: #ffffff; /* Background color for the page */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}

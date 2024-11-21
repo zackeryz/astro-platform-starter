@@ -48,3 +48,13 @@
         @apply text-neutral-400 bg-neutral-700;
     }
 }
+
+nav.transbox{
+	gap:4;
+	align-items: center;
+	display:flex;
+	color:black;
+	padding:2px;
+	opacity:0.0;
+}
+

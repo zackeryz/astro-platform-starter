@@ -58,7 +58,7 @@ div.transbox{
 	padding:2px;
 	opacity:0.0;
 }
-.landing-page-container {
+div.landing-page-container {
   max-width: 800px; /* Adjust width as needed */
   margin: 20px auto; /* Center the container */
   padding: 20px; /* Add internal spacing */

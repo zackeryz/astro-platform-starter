@@ -1,12 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import ContextAlert from '../components/ContextAlert.astro';
-import { redirect } from 'astro:middleware';
-
-export async function middleware({ request, response }) {
-  return redirect('/redirect');
-}
+export const title = 'Contact';
 ---
+
+<script>
+  window.location.href = '/redirect';
+</script>
 
 <Layout title="Zack ZoBell Portfolio - Contact">
     <ContextAlert class="mb-4" />

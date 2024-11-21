@@ -1,8 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import ContextAlert from '../components/ContextAlert.astro';
-import { Image } from 'astro:pages';
-import redirect from '../pages/index.astro';
+import { redirect } from 'astro:middleware';
+
+export async function middleware({ request, response }) {
+  return redirect('/redirect');
+}
 ---
 
 <Layout title="Zack ZoBell Portfolio - Contact">

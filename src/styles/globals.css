@@ -75,3 +75,27 @@ section.about{
 	padding-top:12px;
 	padding-bottom:12px;
 }
+
+section.portfolio{
+	border-radius: 0px 0px 0px 0px; /* Rounded corners */
+	background-color: white;
+	color:black;
+	padding-top:12px;
+	padding-bottom:12px;
+}
+
+section.skills{
+	border-radius: 0px 0px 0px 0px; /* Rounded corners */
+	background-color: white;
+	color:black;
+	padding-top:12px;
+	padding-bottom:12px;
+}
+
+section.contact{
+	border-radius: 0px 0px 8px 8px; /* Rounded corners */
+	background-color: white;
+	color:black;
+	padding-top:12px;
+	padding-bottom:12px;
+}

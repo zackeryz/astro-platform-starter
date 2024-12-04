@@ -69,11 +69,17 @@ div.landing-page-container {
 
 section.about{
 	
+	width:50%;
+	
+}
+{
+	
 	border-radius: 8px 8px 0px 0px; /* Rounded corners */
 	background-color: white;
 	color:black;
 	padding-top:12px;
 	padding-bottom:12px;
+	
 }
 
 section.portfolio{
@@ -85,6 +91,9 @@ section.portfolio{
 }
 
 section.skills{
+	width:50%;
+}
+{
 	border-radius: 0px 0px 0px 0px; /* Rounded corners */
 	background-color: white;
 	color:black;
@@ -98,4 +107,12 @@ section.contact{
 	color:black;
 	padding-top:12px;
 	padding-bottom:12px;
+}
+section.mission{
+	border-radius: 8px 8px 0px 0px; /* Rounded corners */
+	background-color: white;
+	color:black;
+	padding-top:12px;
+	padding-bottom:12px;
+	
 }

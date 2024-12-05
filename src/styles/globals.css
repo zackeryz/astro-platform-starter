@@ -76,6 +76,15 @@ section.about{
 	border: 1px solid black;
 	padding:12px;
 }
+div.about{
+	
+	width:49%;
+	height:100%;
+	margin:auto;
+	border-radius:8px;
+	border: 1px solid black;
+	padding:12px;
+}
 {
 	
 	border-radius: 8px 8px 0px 0px; /* Rounded corners */

@@ -79,8 +79,8 @@ section.about{
 div.about{
 	
 	width:49%;
-	height:100%;
-	
+	height:1000px;
+	margin:auto;
 	border-radius:8px;
 	border: 1px solid black;
 	padding:12px;
@@ -105,8 +105,8 @@ section.portfolio{
 
 section.skills{
 	width:49%;
-	height:100%;
-	
+	height:1000px;
+	margin:auto;
 	border-radius:8px;
 	border: 1px solid black;
 	padding:12px;

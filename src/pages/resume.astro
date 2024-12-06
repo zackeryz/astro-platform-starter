@@ -1,31 +1,25 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import ContextAlert from '../components/ContextAlert.astro';
-import { Image } from 'astro:assets';
 import resume from '../assets/zackzobellresume.pdf';
 ---
 
 <Layout title="Zack ZoBell Portfolio - Resume">
-    <ContextAlert class="mb-4" />
+    <!-- Alert (if applicable) -->
     <h1 class="mb-10">My Resume</h1>
 
-    <!-- PDF Container with Download Button -->
-    <div class="relative">
-        <!-- Embedded PDF -->
-        <iframe 
-            src={resume} 
-            width="100%" 
-            height="1100px" 
-            class="rounded-lg shadow-lg border"
-        ></iframe>
-
-        <!-- Download Button -->
-        <a 
-            href={resume} 
-            download 
-            class="absolute top-4 right-4 bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700 focus:outline-none focus:ring focus:ring-blue-300"
-        >
-            Download PDF
+    <!-- Download Button -->
+    <div class="flex justify-center mb-6">
+        <a href={resume} download class="btn btn-primary px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition">
+            Download Resume
         </a>
     </div>
+
+    <!-- Embedded Resume -->
+    <embed 
+        src={resume} 
+        type="application/pdf" 
+        width="100%" 
+        height="1100px" 
+        class="rounded-lg shadow-lg"
+    />
 </Layout>

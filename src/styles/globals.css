@@ -147,3 +147,7 @@ section.mission{
 	border-radius: 8px 8px 0px 0px; /* Rounded corners */
 	color:black;
 }
+.overlay{
+	background: rgba(0,0,0,0.5);
+	background-color:black;
+}

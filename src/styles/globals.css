@@ -82,7 +82,7 @@ section.about{
 div.about{
 	
 	width:49%;
-	height:475px;
+	height:375px;
 	margin:auto;
 	border-radius:8px;
 	border: 1px solid black;
@@ -100,7 +100,7 @@ div.about{
 
 section.portfolio{
 	border-radius: 0px 0px 0px 0px; /* Rounded corners */
-	background-color: white;
+	
 	color:black;
 	padding-top:12px;
 	padding-bottom:12px;
@@ -123,7 +123,8 @@ section.skills{
 }
 
 section.contact{
-	border-radius: 0px 0px 8px 8px; /* Rounded corners */
+	
+	border-radius: 8px; /* Rounded corners */
 	background-color:black;
 	color:white;
 	padding-top:12px;

@@ -9,7 +9,7 @@ title: 'Snake Game - Zack ZoBell Portfolio'
     <div class="game-info">
       <p>Use arrow keys to control the snake</p>
       <p>Score: <span id="score">0</span></p>
-	  <button onclick="start()">Start</button>
+	  <button onclick="start()"  class="btn btn-primary mt-4 px-8 py-2 bg-blue-500 text-white font-bold rounded-md hover:bg-blue-600 transition">Start</button>
     </div>
   </div>
 
@@ -20,7 +20,7 @@ title: 'Snake Game - Zack ZoBell Portfolio'
   const canvasSize = 400;
   canvas.width = canvasSize;
   canvas.height = canvasSize;
-	start = false;
+	const start = false;
   let snake = [{ x: 8 * gridSize, y: 8 * gridSize }];
   let food = { x: 5 * gridSize, y: 5 * gridSize };
   let dx = gridSize;

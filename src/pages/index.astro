@@ -1,76 +1,81 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import resume from '../assets/zackzobellresume.pdf';
+
+const explainer = `Hi! I'm Zack, a passionate software developer and IT professional with experience in web development, project management, and problem-solving. Explore my portfolio to see my skills, projects, and more!`;
 ---
 
 <Layout title="Zack ZoBell Portfolio">
     <!-- Hero Section -->
-    <div class="landing-page-container">
-        <!-- Mission and Skills Section -->
-        <section class="mission">
-            <h2>Mission Statement</h2>
-            <p>
-                I am an IT professional dedicated to continuous growth and learning in an ever-evolving field.
-                My mission is to deliver effective and innovative solutions while maintaining a healthy balance
-                between professional excellence and personal well-being. By fostering collaboration and embracing
-                new challenges, I strive to achieve success that supports both my career aspirations and a fulfilling life.
-            </p>
-        </section>
-        <section class="double">
-            <section class="skills">
-                <h2 class="text-3xl font-semibold text-center">Skills & Expertise</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 max-w-5xl mx-auto">
-                    <div class="skill text-center">
-                        <h3 class="font-semibold">Web Development</h3>
-                        <p>HTML<br>CSS<br>JavaScript<br>PHP<br>UI design<br>Figma design</p>
-                    </div>
-                    <div class="skill text-center">
-                        <h3 class="font-semibold">Network Administration</h3>
-                        <p>LAN/WAN<br>TCP/IP<br>VPN<br>Firewalls</p>
-                    </div>
-                    <div class="skill text-center">
-                        <h3 class="font-semibold">Programming</h3>
-                        <p>C++<br>C#<br>Python<br>PHP<br>SwiftUI</p>
-                    </div>
-                </div>
-            </section>
-            <div class="about">
-                <h2 class="text-3xl font-semibold text-center">Relevant Experience</h2>
-                <h3 class="font-semibold">Pluto Micro</h3>
-                <p>Working with a full support IT company as a tier 1 technician</p>
-                <h3 class="font-semibold">Customer Service</h3>
-                <p>Working as a bartender in a pool hall, serving many different customers, learning how to interact professionally.</p>
-            </div>
-        </section>
-        <!-- Portfolio Section -->
-        <section class="portfolio">
-            <h2 class="text-3xl font-semibold text-center">My Work</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 max-w-5xl mx-auto">
-                <div class="project text-center">
-                    <h3 class="font-semibold">Project 1</h3>
-                    <p>Short description of the project</p>
-                    <a href="/project1" class="btn btn-primary mt-4 px-8 py-2 bg-blue-500 text-white font-bold rounded-md hover:bg-blue-600 transition">View Details</a>
-                </div>
-                <div class="project text-center">
-                    <h3 class="font-semibold">Project 2</h3>
-                    <p>Short description of the project</p>
-                    <a href="/project2" class="btn btn-primary mt-4 px-8 py-2 bg-blue-500 text-white font-bold rounded-md hover:bg-blue-600 transition">View Details</a>
-                </div>
-                <div class="project text-center">
-                    <h3 class="font-semibold">Project 3</h3>
-                    <p>Short description of the project</p>
-                    <a href="/project3" class="btn btn-primary mt-4 px-8 py-2 bg-blue-500 text-white font-bold rounded-md hover:bg-blue-600 transition">View Details</a>
-                </div>
-            </div>
-        </section>
+ 
+	<div class="landing-page-container">
 
-        <!-- Contact Section -->
-        <section class="contact">
-            <h2>Contact Me</h2>
-            <p>Feel free to reach out to discuss projects, opportunities, or collaborations.</p>
-            <div class="text-center mt-6">
-                <a href="mailto:zack@zobell.com" class="btn btn-primary mt-4 px-8 py-2 bg-blue-500 text-white font-bold rounded-md hover:bg-blue-600 transition">Email Me</a>
+    <!-- mission statement and skills -->
+	<section class="mission">
+	<h2>Mission Statement</h2>
+	<p> I am an IT professional dedicated to continuous growth and learning in an ever-evolving field. My mission is to deliver effective and innovative solutions while maintaining a healthy balance between professional excellence and personal well-being. By fostering collaboration and embracing new challenges, I strive to achieve success that supports both my career aspirations and a fulfilling life</p>
+	</section>
+	<section class="double">
+	<section class="skills">
+        <h2 class="text-3xl font-semibold text-center">Skills & Expertise</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 max-w-5xl mx-auto">
+            <div class="skill text-center">
+                <h3 class="font-semibold">Web Development</h3>
+                <p>HTML<br>CSS<br>JavaScript<br>PHP<br>UI design<br>Figma design</p>
             </div>
-        </section>
+            <div class="skill text-center">
+                <h3 class="font-semibold">Network Administration</h3>
+                <p>LAN/WAN<br>TCP/IP<br>VPN<br>Firewalls</p>
+            </div>
+            <div class="skill text-center">
+                <h3 class="font-semibold">Programming</h3>
+                <p>C++<br>C#<br>Python<br>PHP<br>SwiftUI</p>
+            </div>
+        </div>
+    </section>
+    <div class="about">
+        <h2 class="text-3xl font-semibold text-center">Relivent Experience</h2>
+        
+            
+                <h3 class="font-semibold">Pluto Micro</h3><br>
+                <p>Working with a full support IT company as a tier 1 technition</p>
+           <br>
+            
+                <h3 class="font-semibold">Customer Service</h3><br>
+                <p>Working as a bartender in a pool hall I served lots of grumpy argumenative people, and know how to be curtious to customers. </p>
+				
+			</div>
+				</section>
+    <!-- Portfolio Section -->
+    <section class="portfolio">
+        <h2 class="text-3xl font-semibold text-center">My Work</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 max-w-5xl mx-auto">
+            <div class="project text-center">
+                <h3 class="font-semibold">Project 1</h3>
+                <p>Short description of the project</p>
+                <a href="/project1" class="btn btn-primary mt-4 px-8 py-2 bg-blue-500 text-white font-bold rounded-md hover:bg-blue-600 transition">View Details</a>
+            </div>
+            <div class="project text-center">
+                <h3 class="font-semibold">Project 2</h3>
+                <p>Short description of the project</p>
+                <a href="/project2" class="btn btn-primary mt-4 px-8 py-2 bg-blue-500 text-white font-bold rounded-md hover:bg-blue-600 transition">View Details</a>
+            </div>
+            <div class="project text-center">
+                <h3 class="font-semibold">Project 3</h3>
+                <p>Short description of the project</p>
+                <a href="/project3" class="btn btn-primary mt-4 px-8 py-2 bg-blue-500 text-white font-bold rounded-md hover:bg-blue-600 transition">View Details</a>
+            </div>
+			
+    </section>
+	
+	<div>
+    <!-- Contact Section -->
+    <section class="contact bg-gray-800">
+        <h2 class="text-3xl font-semibold text-center">Contact Me</h2>
+        <p class="text-center mt-4">Feel free to reach out to discuss projects, opportunities, or collaborations.</p>
+        <div class="text-center mt-6">
+            <a href="mailto:zack@zobell.com" class="btn btn-primary mt-4 px-8 py-2 bg-blue-500 text-white font-bold rounded-md hover:bg-blue-600 transition">Email Me</a>
+        </div>
+    </section>
+	
     </div>
 </Layout>

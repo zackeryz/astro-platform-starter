@@ -148,6 +148,5 @@ section.mission{
 	color:black;
 }
 .overlay{
-	background: rgba(0,0,0,0.5);
-	background-color:black;
+	background-color: rgba(0,0,0,0.5);
 }

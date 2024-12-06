@@ -141,30 +141,3 @@ div.overlay {
 	 border-radius: 8px; /* Rounded corners */
     background-color: rgba(0, 0, 0, 0.5);
 }
-body {
-    font-family: Arial, sans-serif;
-    background-color: #2e2e2e;
-    color: white;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center;
-}
-
-.game-container {
-    text-align: center;
-    width: 300px;
-    margin-top: 20px; /* Add some spacing below the header */
-}
-
-canvas {
-    border: 2px solid #ffffff;
-    background-color: #1c1c1c;
-    display: block;
-    margin: 20px auto;
-}
-
-.game-info {
-    font-size: 1.2em;
-}

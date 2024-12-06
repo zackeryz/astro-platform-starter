@@ -7,4 +7,34 @@ import ContextAlert from '../components/ContextAlert.astro';
     <ContextAlert class="mb-4" />
     <h1 class="mb-10">My Coding Projects</h1>
     <p class="mb-8">Here are some examples of my coding work...</p>
+
+    <!-- Projects Container -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Project 1 -->
+        <a href="/snake-game" class="project-box relative rounded-lg overflow-hidden">
+            <div class="w-full h-72 bg-cover bg-center rounded-lg" style="background-image: url('/images/coding-project1.jpg');">
+                <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-white">
+                    <h3 class="font-semibold text-xl">Snake Game</h3>
+                </div>
+            </div>
+        </a>
+
+        <!-- Project 2 -->
+        <a href="/coding-project-2" class="project-box relative rounded-lg overflow-hidden">
+            <div class="w-full h-72 bg-cover bg-center rounded-lg" style="background-image: url('/images/coding-project2.jpg');">
+                <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-white">
+                    <h3 class="font-semibold text-xl">Coding Project 2</h3>
+                </div>
+            </div>
+        </a>
+
+        <!-- Project 3 -->
+        <a href="/coding-project-3" class="project-box relative rounded-lg overflow-hidden">
+            <div class="w-full h-72 bg-cover bg-center rounded-lg" style="background-image: url('/images/coding-project3.jpg');">
+                <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-white">
+                    <h3 class="font-semibold text-xl">Coding Project 3</h3>
+                </div>
+            </div>
+        </a>
+    </div>
 </Layout>

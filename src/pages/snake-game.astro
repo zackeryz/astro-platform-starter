@@ -82,6 +82,7 @@ title: 'Snake Game - Zack ZoBell Portfolio'
   }
 
   function updateGame() {
+  if(start = 0){
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       moveSnake();
       drawSnake();
@@ -92,7 +93,7 @@ title: 'Snake Game - Zack ZoBell Portfolio'
           snake = [{ x: 8 * gridSize, y: 8 * gridSize }];
           score = 0;
           document.getElementById("score").textContent = score;
-      }
+      }}
   }
 
   function changeDirection(event) {
@@ -111,10 +112,10 @@ title: 'Snake Game - Zack ZoBell Portfolio'
       }
   }
 
-if(start == 0){
+
   document.addEventListener("keydown", changeDirection);
   setInterval(updateGame, 100);
-  }
+  }\
 </script>
 
 

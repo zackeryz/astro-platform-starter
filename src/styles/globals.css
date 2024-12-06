@@ -47,11 +47,11 @@
     .btn:disabled {
         @apply text-neutral-400 bg-neutral-700;
     }
-	.btn btn-primary{
+	
+}
+a.round{
 		border-radius: 0px 0px 8px 8px;
 	}
-}
-
 div.transbox{
 	color:white;
 	gap:4;
@@ -130,7 +130,7 @@ section.skills{
 section.contact{
 	
 	border-radius: 8px; /* Rounded corners */
-	background-color:bg-blue-500;
+	background-color:;
 	color:white;
 	padding-top:12px;
 	padding-bottom:12px;

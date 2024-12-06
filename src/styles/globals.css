@@ -47,106 +47,87 @@
     .btn:disabled {
         @apply text-neutral-400 bg-neutral-700;
     }
-	
 }
-a.round{
-		border-radius: 0px 0px 8px 8px;
-	}
-div.transbox{
-	color:white;
-	gap:4;
-	align-items: center;
-	display:flex;
-	
-	padding:2px;
-	opacity:0.0;
+
+a.round {
+    border-radius: 0px 0px 8px 8px;
 }
+
+div.transbox {
+    color: white;
+    gap: 4px;
+    align-items: center;
+    display: flex;
+    padding: 2px;
+    opacity: 0.0;
+}
+
 div.landing-page-container {
-  max-width: 800px; /* Adjust width as needed */
-  margin: 20px auto; /* Center the container */
-  padding: 20px; /* Add internal spacing */
-
- color:white;
- background-image:url("/images/calgary.jpeg");
- background-repeat: no-repeat;
-  background-size: 100% 100%;
-  background-color: rgba(0,0,0,0.5)
- border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7); /* Shadow effect */
+    max-width: 800px; /* Adjust width as needed */
+    margin: 20px auto; /* Center the container */
+    padding: 20px; /* Add internal spacing */
+    color: white; /* Ensure white text globally */
+    background-image: url("/images/calgary.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7); /* Shadow effect */
 }
 
-section.about{
-	
-	width:49%;
-	height:100%;
-	margin:auto;
-	border-radius:8px;
-	border: 1px solid black;
-	padding:12px;
-}
-div.about{
-	color:white;
-	width:49%;
-	height:375px;
-	margin:auto;
-	border-radius:8px;
-	
-	padding:12px;
-}
-{
-	
-	border-radius: 8px 8px 0px 0px; /* Rounded corners */
-	background-color: white;
-	color:black;
-	padding-top:12px;
-	padding-bottom:12px;
-	
+section.about {
+    width: 49%;
+    height: 100%;
+    margin: auto;
+    border-radius: 8px;
+    border: 1px solid black;
+    padding: 12px;
+    color: white; /* Ensure white text */
 }
 
-section.portfolio{
-	border-radius: 0px 0px 0px 0px; /* Rounded corners */
-	
-	color:white;
-	padding-top:12px;
-	padding-bottom:12px;
+div.about {
+    color: white; /* Explicitly ensure white text */
+    width: 49%;
+    height: 375px;
+    margin: auto;
+    border-radius: 8px;
+    padding: 12px;
 }
 
-section.skills{
-	width:49%;
-	height:375px;
-	margin:auto;
-	border-radius:8px;
-	color:white;
-	padding:12px;
-}
-{
-	border-radius: 0px 0px 0px 0px; /* Rounded corners */
-	background-color: white;
-	color:black;
-	padding-top:12px;
-	padding-bottom:12px;
+section.portfolio {
+    border-radius: 0px 0px 0px 0px; /* Rounded corners */
+    color: white; /* White text for this section */
+    padding-top: 12px;
+    padding-bottom: 12px;
 }
 
-section.contact{
-	
-	border-radius: 8px; /* Rounded corners */
-	background-color:;
-	color:white;
-	padding-top:12px;
-	padding-bottom:12px;
+section.skills {
+    width: 49%;
+    height: 375px;
+    margin: auto;
+    border-radius: 8px;
+    color: white; /* White text */
+    padding: 12px;
 }
-section.double{
-	display:flex;
-	
-	
-	color:white;
-	
-	
+
+section.contact {
+    border-radius: 8px; /* Rounded corners */
+    background-color: rgba(0, 0, 0, 0.5); /* Ensure contrast with white text */
+    color: white; /* White text */
+    padding-top: 12px;
+    padding-bottom: 12px;
 }
-section.mission{
-	border-radius: 8px 8px 0px 0px; /* Rounded corners */
-	color:white;
+
+section.double {
+    display: flex;
+    color: white; /* White text */
 }
-.overlay{
-	background-color: rgba(0,0,0,0.5);
+
+section.mission {
+    border-radius: 8px 8px 0px 0px; /* Rounded corners */
+    color: white; /* White text */
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
 }

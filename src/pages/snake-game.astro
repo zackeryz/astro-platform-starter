@@ -9,6 +9,7 @@ title: 'Snake Game - Zack ZoBell Portfolio'
     <div class="game-info">
       <p>Use arrow keys to control the snake</p>
       <p>Score: <span id="score">0</span></p>
+	  <button onclick="start()">Start</button>
     </div>
   </div>
 
@@ -19,7 +20,7 @@ title: 'Snake Game - Zack ZoBell Portfolio'
   const canvasSize = 400;
   canvas.width = canvasSize;
   canvas.height = canvasSize;
-
+	start = false;
   let snake = [{ x: 8 * gridSize, y: 8 * gridSize }];
   let food = { x: 5 * gridSize, y: 5 * gridSize };
   let dx = gridSize;
@@ -32,7 +33,10 @@ title: 'Snake Game - Zack ZoBell Portfolio'
           event.preventDefault(); // Prevent scrolling
       }
   });
-
+	
+	function start(){
+	start = true;
+	}
   function drawSnake() {
       snake.forEach((segment, index) => {
           ctx.fillStyle = index === 0 ? "green" : "lightgreen";
@@ -41,6 +45,7 @@ title: 'Snake Game - Zack ZoBell Portfolio'
   }
 
   function moveSnake() {
+  if(start){
       const head = { x: snake[0].x + dx, y: snake[0].y + dy };
       snake.unshift(head);
       if (head.x === food.x && head.y === food.y) {
@@ -49,7 +54,7 @@ title: 'Snake Game - Zack ZoBell Portfolio'
           generateFood();
       } else {
           snake.pop();
-      }
+      }}
   }
 
   function generateFood() {
@@ -83,6 +88,7 @@ title: 'Snake Game - Zack ZoBell Portfolio'
       drawFood();
       if (checkCollision()) {
           alert("Game Over! Final Score: " + score);
+		  start = false;
           snake = [{ x: 8 * gridSize, y: 8 * gridSize }];
           score = 0;
           document.getElementById("score").textContent = score;

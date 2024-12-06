@@ -21,13 +21,23 @@ title: 'Snake Game - Zack ZoBell Portfolio'
   canvas.width = canvasSize;
   canvas.height = canvasSize;
   
-  let start = false;
-  let snake = [{ x: 8 * gridSize, y: 8 * gridSize }];
-  let food = { x: 5 * gridSize, y: 5 * gridSize };
-  let dx = gridSize;
-  let dy = 0;
-  let score = 0;
+  let start = false;  // Start flag
+  let snake;
+  let food;
+  let dx;
+  let dy;
+  let score;
   let gameInterval;
+
+  // Function to initialize or reset the game
+  function initializeGame() {
+    snake = [{ x: 8 * gridSize, y: 8 * gridSize }];
+    food = { x: 5 * gridSize, y: 5 * gridSize };
+    dx = gridSize;
+    dy = 0;
+    score = 0;
+    document.getElementById("score").textContent = score;
+  }
 
   // Prevent default behavior of the arrow keys
   window.addEventListener('keydown', function(event) {
@@ -88,7 +98,10 @@ title: 'Snake Game - Zack ZoBell Portfolio'
       drawFood();
       if (checkCollision()) {
           alert("Game Over! Final Score: " + score);
-          resetGame();
+          initializeGame(); // Reset game after loss
+          clearInterval(gameInterval); // Stop game loop
+          start = false;
+          document.getElementById("startButton").textContent = "Start"; // Change button to "Start"
       }
   }
 
@@ -111,27 +124,20 @@ title: 'Snake Game - Zack ZoBell Portfolio'
   document.addEventListener("keydown", changeDirection);
 
   function toggleGame() {
-    if (!start) {
-        start = true;
-        document.getElementById("startButton").textContent = "Pause"; // Change button text to "Pause"
-        score = 0; // Reset score
-        document.getElementById("score").textContent = score;
-        snake = [{ x: 8 * gridSize, y: 8 * gridSize }]; // Reset snake position
-        gameInterval = setInterval(updateGame, 100); // Start game loop
+  alert(button work)
+    if (start) {
+	alert(start work)
+      // If game is already running, stop it
+      clearInterval(gameInterval);
+      start = false;
+      document.getElementById("startButton").textContent = "Start"; // Change button text back to "Start"
     } else {
-        start = false;
-        clearInterval(gameInterval); // Stop game loop
-        document.getElementById("startButton").textContent = "Start"; // Change button text back to "Start"
+      // Start a new game
+      initializeGame();
+      start = true;
+      document.getElementById("startButton").textContent = "Pause"; // Change button text to "Pause"
+      gameInterval = setInterval(updateGame, 100); // Start the game loop
     }
-  }
-
-  function resetGame() {
-    clearInterval(gameInterval); // Stop game loop on loss
-    start = false;
-    document.getElementById("startButton").textContent = "Start"; // Change button text to "Start"
-    snake = [{ x: 8 * gridSize, y: 8 * gridSize }]; // Reset snake
-    score = 0; // Reset score
-    document.getElementById("score").textContent = score;
   }
 </script>
 

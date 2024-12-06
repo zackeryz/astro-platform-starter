@@ -9,7 +9,7 @@ title: 'Snake Game - Zack ZoBell Portfolio'
     <div class="game-info">
       <p>Use arrow keys to control the snake</p>
       <p>Score: <span id="score">0</span></p>
-	  <button onclick="start()"  class="btn btn-primary mt-4 px-8 py-2 bg-blue-500 text-white font-bold rounded-md hover:bg-blue-600 transition">Start</button>
+      <button id="startButton" onclick="toggleGame()">Start</button>
     </div>
   </div>
 
@@ -20,7 +20,8 @@ title: 'Snake Game - Zack ZoBell Portfolio'
   const canvasSize = 400;
   canvas.width = canvasSize;
   canvas.height = canvasSize;
-	var start = 1;
+  
+  let start = false;
   let snake = [{ x: 8 * gridSize, y: 8 * gridSize }];
   let food = { x: 5 * gridSize, y: 5 * gridSize };
   let dx = gridSize;
@@ -33,10 +34,7 @@ title: 'Snake Game - Zack ZoBell Portfolio'
           event.preventDefault(); // Prevent scrolling
       }
   });
-	
-	function start(){
-	start = 0;
-	}
+
   function drawSnake() {
       snake.forEach((segment, index) => {
           ctx.fillStyle = index === 0 ? "green" : "lightgreen";
@@ -45,7 +43,7 @@ title: 'Snake Game - Zack ZoBell Portfolio'
   }
 
   function moveSnake() {
-  
+    if (start) {
       const head = { x: snake[0].x + dx, y: snake[0].y + dy };
       snake.unshift(head);
       if (head.x === food.x && head.y === food.y) {
@@ -55,6 +53,7 @@ title: 'Snake Game - Zack ZoBell Portfolio'
       } else {
           snake.pop();
       }
+    }
   }
 
   function generateFood() {
@@ -82,18 +81,18 @@ title: 'Snake Game - Zack ZoBell Portfolio'
   }
 
   function updateGame() {
-  if(start = 0){
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       moveSnake();
       drawSnake();
       drawFood();
       if (checkCollision()) {
           alert("Game Over! Final Score: " + score);
-		  start = 1;
+          start = false;
           snake = [{ x: 8 * gridSize, y: 8 * gridSize }];
           score = 0;
           document.getElementById("score").textContent = score;
-      }}
+          document.getElementById("startButton").textContent = "Start"; // Reset button text
+      }
   }
 
   function changeDirection(event) {
@@ -112,39 +111,49 @@ title: 'Snake Game - Zack ZoBell Portfolio'
       }
   }
 
-
   document.addEventListener("keydown", changeDirection);
   setInterval(updateGame, 100);
-  }\
+
+  function toggleGame() {
+    if (!start) {
+        start = true;
+        document.getElementById("startButton").textContent = "Pause"; // Change to Pause when the game starts
+        score = 0; // Reset score when starting
+        document.getElementById("score").textContent = score;
+        snake = [{ x: 8 * gridSize, y: 8 * gridSize }]; // Reset snake
+    } else {
+        start = false;
+        document.getElementById("startButton").textContent = "Start"; // Reset button text when pausing
+    }
+  }
 </script>
 
+<style>
+  body {
+      font-family: Arial, sans-serif;
+      background-color: #2e2e2e;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+  }
 
-  <style>
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #2e2e2e;
-        color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-    }
+  .game-container {
+      text-align: center;
+      width: 300px;
+  }
 
-    .game-container {
-        text-align: center;
-        width: 300px;
-    }
+  canvas {
+      border: 2px solid #ffffff;
+      background-color: #1c1c1c;
+      display: block;
+      margin: 20px auto;
+  }
 
-    canvas {
-        border: 2px solid #ffffff;
-        background-color: #1c1c1c;
-        display: block;
-        margin: 20px auto;
-    }
-
-    .game-info {
-        font-size: 1.2em;
-    }
+  .game-info {
+      font-size: 1.2em;
+  }
 </style>
 </Layout>

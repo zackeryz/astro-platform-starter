@@ -20,7 +20,7 @@ title: 'Snake Game - Zack ZoBell Portfolio'
   const canvasSize = 400;
   canvas.width = canvasSize;
   canvas.height = canvasSize;
-	const start = false;
+	var start = 1;
   let snake = [{ x: 8 * gridSize, y: 8 * gridSize }];
   let food = { x: 5 * gridSize, y: 5 * gridSize };
   let dx = gridSize;
@@ -35,7 +35,7 @@ title: 'Snake Game - Zack ZoBell Portfolio'
   });
 	
 	function start(){
-	start = true;
+	start = 0;
 	}
   function drawSnake() {
       snake.forEach((segment, index) => {
@@ -88,7 +88,7 @@ title: 'Snake Game - Zack ZoBell Portfolio'
       drawFood();
       if (checkCollision()) {
           alert("Game Over! Final Score: " + score);
-		  start = false;
+		  start = 1;
           snake = [{ x: 8 * gridSize, y: 8 * gridSize }];
           score = 0;
           document.getElementById("score").textContent = score;
@@ -111,7 +111,7 @@ title: 'Snake Game - Zack ZoBell Portfolio'
       }
   }
 
-if(start == true){
+if(start == 0){
   document.addEventListener("keydown", changeDirection);
   setInterval(updateGame, 100);
   }

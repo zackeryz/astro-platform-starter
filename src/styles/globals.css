@@ -100,6 +100,12 @@ section.portfolio {
     padding-top: 12px;
     padding-bottom: 12px;
 }
+section.references {
+    border-radius: 0px 0px 0px 0px; /* Rounded corners */
+    color: white; /* White text for this section */
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
 
 section.skills {
     width: 49%;

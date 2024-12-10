@@ -144,31 +144,32 @@ title: 'Snake Game - Zack ZoBell Portfolio'
 </script>
 
 <style>
-  body {
-      font-family: Arial, sans-serif;
-      background-color: #2e2e2e;
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-  }
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2e2e2e;
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+}
 
-  .game-container {
-      text-align: center;
-      width: 300px;
-  }
+.game-container {
+    text-align: center;
+    width: 300px;
+    margin-top: 20px; /* Add some spacing below the header */
+}
 
-  canvas {
-      border: 2px solid #ffffff;
-      background-color: #1c1c1c;
-      display: block;
-      margin: 20px auto;
-  }
+canvas {
+    border: 2px solid #ffffff;
+    background-color: #1c1c1c;
+    display: block;
+    margin: 20px auto;
+}
 
-  .game-info {
-      font-size: 1.2em;
-  }
+.game-info {
+    font-size: 1.2em;
+}
 </style>
 </Layout>
